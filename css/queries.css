@@ -1,0 +1,50 @@
+/* Content - grid section */
+
+@media screen and (max-width: 1500px) {
+    .grid {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    .margin-top {
+        margin-top: 1rem;
+      }
+
+    .padding-right {
+    padding-right: 1rem;
+    }
+}
+
+
+/* Content - Slideshow and YT video */
+
+@media screen and (max-width: 1200px) {
+    .img-query {
+      width: auto;
+      height: 300px;
+    }
+
+    .img-query2 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .img-query {
+        width: auto;
+        height: 225px;
+      }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .img-query2 {
+    width: 150px;
+    height: 150px;
+    }
+}

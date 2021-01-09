@@ -1,0 +1,274 @@
+ *{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+ }
+ 
+ 
+ /* -----------------*/
+  /* ---VIDEO HEADER-*/
+  /* -----------------*/
+
+header {
+    position: relative;
+    background-color: black;
+    height: 90vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('/images/header.jpg') black no-repeat center center scroll;
+    }
+    header video {
+      display: none;
+    }
+  }
+
+  /* -----------------*/
+  /* ---END OF HEADER-*/
+  /* -----------------*/
+
+  /* ---NAV BAR----*/
+
+  .scale {
+    transition: all .3s ease-in-out;
+  }
+  .scale:hover {
+    transform: scale(1.1);
+  }
+
+  .rotate:hover {
+    animation: rotate-btn .5s linear 5;
+  }
+  
+  @keyframes rotate-btn {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /*----- Content -------*/
+
+  /*------ FLIP CARD ----*/
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.middle-card {
+  margin: 0px 100px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+  /* ----- GRID------ */
+  .margin-top {
+    margin-top: 3rem;
+  }
+
+  .padding-right {
+    padding-right: 3rem;
+  }
+
+  /* ----- skew section ----*/
+
+  /* .box-1 {
+    width: 50%;
+    margin-left: 135px;
+  } */
+
+  .interview-section {
+    display: flex;
+    height: 500px;
+    padding-top: 80px;
+  }
+
+  .pic-block {
+    flex: 1;
+  }
+
+  .text-block {
+    flex: 1;
+    padding-right: 250px;
+  }
+
+  #btn-1 {
+    width: 50%;
+    margin: 30px auto;  
+  }
+
+  #rounded-img{
+    border-radius: 50%;
+  }
+
+  #img-1 {
+    position: relative;
+    top: 60px;
+    left: 300px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 10;
+    transition: all .2s;
+  }
+
+  #img-1:hover {
+    transform: scale(2);
+    z-index: 12;
+  }
+
+  #img-2 {
+    position: relative;
+    top: 150px;
+    left: -35px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 11;
+    transition: all .2s;
+  }
+
+  #img-2:hover {
+    transform: scale(1.5);
+    z-index: 12;
+  }
+
+  #img-3 {
+    position: relative;
+    top: -35px;
+    left: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all .2s;
+  }
+
+  #img-3:hover {
+    transform: scale(2);
+    z-index: 12;
+  }
+
+  #img-4 {
+    position: relative;
+    top: -40px;
+    left: -390px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 11;
+    transition: all .2s;
+  }
+
+  #img-5 {
+    position: relative;
+    top: 155px;
+    left: -200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 11;
+    transition: all .2s;
+  }
+
+  /* ---NEWSLETTER----*/
+  
+
+  .call-to-action {
+    position: relative;
+    background-color: #343a40;
+    background: url("../images/newsletter.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  
+  .call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+
+  /* --- FOOTER ----*/
+
+  .scale1 {
+    transition: all .3s ease-in-out;
+  }
+  .scale1:hover {
+    transform: scale(1.4);
+  }
